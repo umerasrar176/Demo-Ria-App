@@ -6,7 +6,8 @@ platform :ios do
     match(type: "appstore", readonly: true)      # Use match for code signing
     build_ios_app(
       scheme: "Runner",
-      export_options: "ExportOptions.plist"
+      export_options: "ExportOptions.plist",
+      xcargs: "-allowProvisioningUpdates"
     )
     upload_to_testflight(skip_waiting_for_build_processing: true)
     deliver(force: false)
