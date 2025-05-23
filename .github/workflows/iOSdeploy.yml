@@ -48,7 +48,7 @@ jobs:
 
       - name: Build and deploy with Fastlane
         env:
-          FASTLANE_USER:: umer@sparkleo.io
+          FASTLANE_USER: "umer@sparkleo.io"
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           MATCH_PASSWORD: ria-demo-app
           MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
