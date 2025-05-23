@@ -3,7 +3,7 @@ default_platform(:ios)
 platform :ios do
   desc "Deploy a new version to the App Store"
   lane :release do
-    match(type: "appstore", readonly: true)      # Use match for code signing
+    match(type: "appstore", readonly: true, keychain_password: ENV["KEYCHAIN_PASSWORD"])      # Use match for code signing
     build_ios_app(
       scheme: "Runner",
       export_options: "ExportOptions.plist",
