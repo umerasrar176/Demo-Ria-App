@@ -36,18 +36,23 @@ jobs:
           cd ios
           pod install
 
-      - name: Debug env
+      - name: Debug secrets
         run: |
-          echo "APPLE_ID: $APPLE_ID"
-          echo "FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD Length: ${#FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD}"
+          echo "APPLE_ID is ${APPLE_ID:+set}"
+          echo "FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD length: ${#FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD}"
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+
 
 
       - name: Build and deploy with Fastlane
         env:
-          APPLE_ID: umer@sparkleo.io
+          APPLE_ID: ${{ secrets.APPLE_ID }}
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           MATCH_PASSWORD: ria-demo-app
           MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
         run: |
           cd ios
           bundle exec fastlane release
+
