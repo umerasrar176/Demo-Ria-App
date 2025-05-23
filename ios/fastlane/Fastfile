@@ -19,6 +19,15 @@ platform :ios do
       keychain_password: "fastlane123!"
     )
 
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: "Runner.xcodeproj",
+      targets: ["Runner"],
+      code_sign_identity: "Apple Distribution",
+      profile_name: "match AppStore com.sparkleo.demoRia",
+      team_id: "KUU9HSKX4J"
+    )
+
     build_ios_app(
       scheme: "Runner",
       export_method: "app-store",
