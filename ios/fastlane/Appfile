@@ -1,4 +1,4 @@
 apple_id("umer@sparkleo.io")           # Apple Developer ID
-team_id("R6M5FCU77F")                          # Apple Developer Team ID
+team_id("KUU9HSKX4J")                          # Apple Developer Team ID
 itc_team_id("KUU9HSKX4J")                  # App Store Connect Team ID
 app_identifier("com.sparkleo.demoRia")        # Your app's bundle ID
