@@ -27,5 +27,6 @@ platform :ios do
       export_team_id: "KUU9HSKX4J",
       xcargs: "-allowProvisioningUpdates"
     )
+
   end
 end
