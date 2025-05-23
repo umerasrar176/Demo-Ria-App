@@ -38,6 +38,7 @@ platform :ios do
     )
 
     upload_to_testflight(
+        username: ENV["APPLE_ID"],
         team_id: "KUU9HSKX4J",
         ipa: "./Runner.ipa"
       )
