@@ -41,6 +41,7 @@ platform :ios do
         username: ENV["APPLE_ID"],
         team_id: "KUU9HSKX4J",
         ipa: "./Runner.ipa"
+        skip_waiting_for_build_processing: true
       )
 
   end
