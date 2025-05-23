@@ -5,7 +5,7 @@ platform :ios do
   lane :release do
     create_keychain(
       name: "ios-build.keychain",
-      password: fastlane123!,
+      password: "fastlane123!",
       default_keychain: true,
       unlock: true,
       timeout: 3600,
@@ -16,7 +16,7 @@ platform :ios do
       type: "appstore",
       readonly: true,
       keychain_name: "ios-build.keychain",
-      keychain_password: fastlane123!
+      keychain_password: "fastlane123!"
     )
 
     build_ios_app(
