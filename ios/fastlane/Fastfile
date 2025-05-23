@@ -37,5 +37,11 @@ platform :ios do
       xcargs: "-allowProvisioningUpdates"
     )
 
+    upload_to_testflight(
+        username: "umer@sparkleo.io",
+        team_id: "KUU9HSKX4J",
+        ipa: "./Runner.ipa"
+      )
+
   end
 end
