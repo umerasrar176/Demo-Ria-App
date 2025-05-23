@@ -22,10 +22,9 @@ platform :ios do
     build_ios_app(
       scheme: "Runner",
       export_method: "app-store",
-      export_options: "ExportOptions.plist", # You can remove this if overriding below
+      export_options: "ExportOptions.plist",
       codesigning_identity: "Apple Distribution",
-      export_team_id: "KUU9HSKX4J", # Make sure this is the correct Apple Developer Team ID
-      provisioning_profile_specifier: "match AppStore com.sparkleo.demoRia",
+      export_team_id: "KUU9HSKX4J",
       xcargs: "-allowProvisioningUpdates"
     )
   end
