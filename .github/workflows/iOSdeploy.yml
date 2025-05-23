@@ -38,14 +38,14 @@ jobs:
 
       - name: Debug env
         run: |
-          echo "Checking env vars..."
           echo "APPLE_ID: $APPLE_ID"
-          echo "FASTLANE_PASSWORD: ${#FASTLANE_PASSWORD}"
+          echo "FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD Length: ${#FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD}"
+
 
       - name: Build and deploy with Fastlane
         env:
           APPLE_ID: umer@sparkleo.io
-          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           MATCH_PASSWORD: ria-demo-app
           MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
         run: |
