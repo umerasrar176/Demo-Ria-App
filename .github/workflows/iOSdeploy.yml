@@ -36,6 +36,12 @@ jobs:
           cd ios
           pod install
 
+      - name: Debug env
+        run: |
+          echo "Checking env vars..."
+          echo "APPLE_ID: $APPLE_ID"
+          echo "FASTLANE_PASSWORD: ${#FASTLANE_PASSWORD}"
+
       - name: Build and deploy with Fastlane
         env:
           APPLE_ID: umer@sparkleo.io
