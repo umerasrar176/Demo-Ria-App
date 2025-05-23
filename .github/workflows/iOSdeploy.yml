@@ -31,6 +31,11 @@ jobs:
           cd ios
           bundle install
 
+      - name: Install CocoaPods
+        run: |
+          cd ios
+          pod install
+
       - name: Build and deploy with Fastlane
         env:
           APPLE_ID: umer@sparkleo.io
