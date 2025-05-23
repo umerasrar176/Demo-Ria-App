@@ -5,9 +5,16 @@
 <dict>
     <key>method</key>
     <string>app-store</string>
-    <key>uploadSymbols</key>
-    <true/>
+    <key>provisioningProfiles</key>
+    <dict>
+        <key>com.sparkleo.demoRia</key>
+        <string>match AppStore com.sparkleo.demoRia</string>
+    </dict>
     <key>compileBitcode</key>
     <true/>
+    <key>signingStyle</key>
+    <string>manual</string>
+    <key>teamID</key>
+    <string>KUU9HSKX4J</string> <!-- Replace with your actual Team ID -->
 </dict>
 </plist>
